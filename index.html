@@ -68,11 +68,62 @@
             background-color: #ffff00;
             padding: 2px 5px;
         }
+        nav {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #ffebcd;
+            border-radius: 10px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ff69b4;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .success-story {
+            background-color: #f0fff0;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .patient-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 10px auto;
+            display: block;
+            border: 3px solid #ff69b4;
+        }
+        .quote {
+            font-style: italic;
+            color: #8a2be2;
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 3px solid #ff69b4;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Dr.Lotterliese van der Pferdestall</h1>
+        <nav>
+            <a href="#home">Startseite</a>
+            <a href="#success1">Erfolgsgeschichte 1</a>
+            <a href="#success2">Erfolgsgeschichte 2</a>
+        </nav>
+
+        <!-- Home Page -->
+        <div id="home">
+            <h1>Dr. Lotterliese van der Pferdestall</h1>
+            <h2>Ihre Psychotherapeutin in Wien</h2>
+            
+            <div class="contact">
+                <h3>📞 24/7 Notfall-Hotline: 0800-LOTTERLIE</h3>
+                <h3>✉️ E-Mail: lotterliese@pferdestall-therapie.at</h3>
+            </div>
+        <h1>Dr.Lotterliese - Psychotherapie im Pferdestall</h1>
         <h2>Ihre Psychotherapeutin in Wien</h2>
         
         <div class="contact">
@@ -103,12 +154,26 @@
         <p>Kombination aus <span class="highlight">radikalem Liebsein</span>, <span class="highlight">paradoxer Fern- und Näheverhältnismässigkeit</span>, <span class="highlight">Reden-beim-Tanzen</span><span class="highlight">pferdegestützter Intervention</span> (Ride the horses!) und <span class="highlight">Zappelphilipp-Bewegungstherapie</span>. Wir arbeiten nicht nur an Ihrem Geist, sondern geben auch Ihren unruhigen Beinen Raum!</p>
         
         <h3 style="color:#ff8c00;">Für wen ist meine Praxis ideal?</h3>
-        <p>• Wenn Sie über 110dzb und 180bpm nicht die Klappe halten können<br>
+        <p>• Wenn Sie bei über 110dzb und 180bpm nicht die Klappe halten können<br>
            • Wenn Ihre Beine nachts eigenständige Tanzperformances veranstalten<br>
            • Wenn Sie einfach mal wieder quatschen wollen<br>
            • Wenn Sie schon mal versucht haben, sitzend zu meditieren und nach 30 Sekunden aufgesprungen sind<br>
            • Frosch am Klo, Kloß im Hals<br>
         </p>
+            <h2 style="color:#ff00ff;">Erfolgsgeschichten meiner Patienten</h2>
+            <div class="success-story">
+                <img src="https://via.placeholder.com/100?text=Herr+Maier" alt="Herr Maier" class="patient-photo">
+                <h3>Herr Maier - Zappelphilippsyndrom</h3>
+                <p>"Nach nur 3 Monaten bei Dr. Lotterliese kann ich endlich ein ganzes Meeting durchsitzen!"</p>
+                <a href="#success1">Mehr lesen...</a>
+            </div>
+            
+            <div class="success-story">
+                <img src="https://via.placeholder.com/100?text=Frau+Schmidt" alt="Frau Schmidt" class="patient-photo">
+                <h3>Frau Schmidt - Restless-Leg-Syndrom</h3>
+                <p>"Meine Beine haben endlich gelernt, nachts zu schlafen statt zu tanzen!"</p>
+                <a href="#success2">Mehr lesen...</a>
+            </div>
         
         
         <h2 style="color:#ff00ff;">Vereinbaren Sie noch heute Ihren Termin!</h2>
