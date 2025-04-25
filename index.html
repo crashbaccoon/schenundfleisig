@@ -163,14 +163,14 @@
             <h2 style="color:#ff00ff;">Erfolgsgeschichten meiner Patienten</h2>
             <div class="success-story">
                 <img src="https://via.placeholder.com/100?text=Herr+Maier" alt="Herr Maier" class="patient-photo">
-                <h3>Herr Maier - Zappelphilippsyndrom</h3>
-                <p>"Nach nur 3 Monaten bei Dr. Lotterliese kann ich endlich ein ganzes Meeting durchsitzen!"</p>
+                <h3>Herr Rafi - Kann mensch oft nichts ausmachen!</h3>
+                <p>"Nach nur 3 Monaten bei Dr. Lotterliese kann ich endlich ein ganzes Meeting durch reiten!"</p>
                 <a href="#success1">Mehr lesen...</a>
             </div>
             
             <div class="success-story">
                 <img src="https://via.placeholder.com/100?text=Frau+Schmidt" alt="Frau Schmidt" class="patient-photo">
-                <h3>Frau Schmidt - Restless-Leg-Syndrom</h3>
+                <h3>Frau Wolfi - Chronische Fehlstellung des Mondes</h3>
                 <p>"Meine Beine haben endlich gelernt, nachts zu schlafen statt zu tanzen!"</p>
                 <a href="#success2">Mehr lesen...</a>
             </div>
@@ -187,5 +187,88 @@
             (Eingang neben den Boxen 3 und 4)</p>
         </div>
     </div>
+
+        <!-- Success Story 1 -->
+        <div id="success1" style="display: none;">
+            <h1 style="color:#ff00ff;">Heilungsgeschichte: Herr Maier</h1>
+            <h2>Von Zappelphilipp zum ruhigen Zeitgenossen</h2>
+            
+            <img src="https://via.placeholder.com/200?text=Herr+Maier" alt="Herr Maier" style="max-width:100%; border-radius:10px; margin:20px 0;">
+            
+            <div class="success-story">
+                <p><strong>Diagnose:</strong> Schweres Zappelphilippsyndrom kombiniert mit Kaffeetassen-zählendem Zwang</p>
+                <p><strong>Therapiedauer:</strong> 6 Monate</p>
+                
+                <div class="quote">
+                    "Ich konnte vor der Therapie keinen Film bis zum Ende anschauen, kein Gespräch führen ohne aufzuspringen, und habe heimlich die Kaffeetassen in jedem Café gezählt. Heute bin ich ein neuer Mensch!"
+                </div>
+                
+                <h3 style="color:#ff4500;">Der Behandlungsverlauf:</h3>
+                <p>1. <span class="highlight">Pferdegestützte Bewegungstherapie:</span> Lernen, Energie kontrolliert abzubauen durch Stallarbeit</p>
+                <p>2. <span class="highlight">Zappel-Zeitmanagement:</span> Geplante Zappelphasen integriert in den Alltag</p>
+                <p>3. <span class="highlight">Kreative Tassen-Therapie:</span> Umwandlung des Zählzwangs in künstlerische Tassenbemalung</p>
+                
+                <h3 style="color:#8a2be2;">Das Ergebnis heute:</h3>
+                <p>• Kann 90-minütige Meetings durchsitzen (mit geplanten Mini-Zappelpausen)<br>
+                   • Hat eine erfolgreiche Tassen-Kunstausstellung veranstaltet<br>
+                   • Dient jetzt als Therapiebegleithund für andere Zappelphilippe</p>
+            </div>
+            
+            <p><a href="#home">← Zurück zur Startseite</a></p>
+        </div>
+
+        <!-- Success Story 2 -->
+        <div id="success2" style="display: none;">
+            <h1 style="color:#ff00ff;">Heilungsgeschichte: Frau Schmidt</h1>
+            <h2>Von nächtlichen Tanzmarathons zur erholsamen Ruhe</h2>
+            
+            <img src="https://via.placeholder.com/200?text=Frau+Schmidt" alt="Frau Schmidt" style="max-width:100%; border-radius:10px; margin:20px 0;">
+            
+            <div class="success-story">
+                <p><strong>Diagnose:</strong> Extremes Restless-Leg-Syndrom mit nächtlichen Tanzattacken</p>
+                <p><strong>Therapiedauer:</strong> 4 Monate</p>
+                
+                <div class="quote">
+                    "Meine Beine waren nachts wie besessen - sie haben Charleston, Tango und sogar Breakdance gemacht, während ich verzweifelt versucht habe zu schlafen. Dr. Lotterliese hat meine Beine 'umerzogen'!"
+                </div>
+                
+                <h3 style="color:#ff4500;">Der Behandlungsverlauf:</h3>
+                <p>1. <span class="highlight">Pferdemassage-Therapie:</span> Beruhigung der Nerven durch spezielle Massagetechniken</p>
+                <p>2. <span class="highlight">Tanzplanung:</span> Gezielte Tanzzeiten am Tag, um den nächtlichen Drang zu reduzieren</p>
+                <p>3. <span class="highlight">Schlafhygiene mit Pferdedecken:</span> Speziell gewichtete Decken zur Beruhigung</p>
+                
+                <h3 style="color:#8a2be2;">Das Ergebnis heute:</h3>
+                <p>• 6-8 Stunden ununterbrochener Schlaf pro Nacht<br>
+                   • Gewinnerin des Wiener Amateur-Tanzwettbewerbs (tagsüber!)<br>
+                   • Entwickelte eine "Restless-Leg-Beruhigungsmassage" für andere Patienten</p>
+            </div>
+            
+            <p><a href="#home">← Zurück zur Startseite</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Simple page navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Show home page by default
+            document.getElementById('home').style.display = 'block';
+            
+            // Handle navigation clicks
+            document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    
+                    // Hide all pages
+                    document.getElementById('home').style.display = 'none';
+                    document.getElementById('success1').style.display = 'none';
+                    document.getElementById('success2').style.display = 'none';
+                    
+                    // Show target page
+                    document.getElementById(targetId).style.display = 'block';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
