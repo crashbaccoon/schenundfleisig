@@ -165,14 +165,14 @@
                 <img src="https://via.placeholder.com/100?text=Herr+Maier" alt="Herr Maier" class="patient-photo">
                 <h3>Herr Rafi - Kann mensch oft nichts ausmachen!</h3>
                 <p>"Nach nur 3 Monaten bei Dr. Lotterliese kann ich endlich ein ganzes Meeting durch reiten!"</p>
-                <a href="#success1">Mehr lesen...</a>
+                <a href="#success1" onclick="showPage('success1')">Mehr lesen...</a>
             </div>
             
             <div class="success-story">
                 <img src="https://via.placeholder.com/100?text=Frau+Schmidt" alt="Frau Schmidt" class="patient-photo">
                 <h3>Frau Wolfi - Chronische Fehlstellung des Mondes</h3>
                 <p>"Meine Beine haben endlich gelernt, nachts zu schlafen statt zu tanzen!"</p>
-                <a href="#success2">Mehr lesen...</a>
+               <a href="#success2" onclick="showPage('success2')">Mehr lesen...</a>
             </div>
         
         
@@ -248,6 +248,13 @@
     </div>
 
     <script>
+    function showPage(pageId) {
+        document.getElementById('home').style.display = 'none';
+        document.getElementById('success1').style.display = 'none';
+        document.getElementById('success2').style.display = 'none';
+        document.getElementById(pageId).style.display = 'block';
+        return false; // prevent default anchor behavior
+        }
         // Simple page navigation
         document.addEventListener('DOMContentLoaded', function() {
             // Show home page by default
